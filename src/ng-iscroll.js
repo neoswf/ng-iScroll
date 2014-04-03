@@ -81,6 +81,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                 }
 
                 scope.$parent.myScroll[scroll_key] = new IScroll(element[0], ngiScroll_opts);
+                document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
             }
 
             // new specific setting for setting timeout using: ng-iscroll-timeout='{val}'
